@@ -1,11 +1,7 @@
-.container {
-    padding: 0 170px;
-}
-
 .top {
     background-color: rgb(242, 24, 79);
     color: #fff;
-    padding: 7px 0;
+    padding: 5px 0;
 }
 
 .flex {

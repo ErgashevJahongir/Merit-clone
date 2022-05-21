@@ -1,24 +1,21 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { IoLogoFacebook } from 'react-icons/io5';
-import { IoLogoInstagram } from 'react-icons/io5';
-import { IoNavigate } from 'react-icons/io5';
-import { IoCall } from 'react-icons/io5';
-import { IoTimeOutline } from 'react-icons/io5';
+import style from '../styles/index.module.css';
 import styles from '../styles/header.module.css';
-import logo from '../public/logo.png';
-import telegram from '../public/telegram-plane-brands.svg';
-import facebook from '../public/facebook-f-brands.svg';
-import instagram from '../public/instagram-brands.svg';
-import telephone from '../public/square-phone-solid.svg';
-import clock from '../public/clock-regular.svg';
-import uzb from '../public/UZ-Uzbekistan-Flag-icon.png';
+
+import logo from '../public/img/main/logo.png';
+import telegram from '../public/icon/main/telegram-plane-brands.svg';
+import facebook from '../public/icon/main/facebook-f-brands.svg';
+import instagram from '../public/icon/main/instagram-brands.svg';
+import telephone from '../public/icon/main/square-phone-solid.svg';
+import clock from '../public/icon/main/clock-regular.svg';
+import uzb from '../public/img/main/UZ-Uzbekistan-Flag-icon.png';
 
 const Header = () => {
     return (
         <header>
             <div className={styles.top}>
-                <div className={styles.container}>
+                <div className={style.container}>
                     <div className={styles.flex}>
                         <div className={styles.language}>
                             <Image src={uzb} width={30} height={30} />{' '}
@@ -66,7 +63,7 @@ const Header = () => {
                 </div>
             </div>
             <div className={styles.logo_nav}>
-                <div className={styles.container}>
+                <div className={style.container}>
                     <div className={styles.flex}>
                         <Link href="/">
                             <Image
@@ -108,7 +105,7 @@ const Header = () => {
                 </div>
             </div>
             <nav className={styles.navbar}>
-                <div className={styles.container}>
+                <div className={style.container}>
                     <div className={styles.nav}>
                         <ul className={styles.left}>
                             <li>
