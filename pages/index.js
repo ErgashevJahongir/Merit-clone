@@ -1,9 +1,8 @@
 import Head from 'next/head';
-import styles from '../styles/header.module.css';
 
 export default function Home() {
     return (
-        <div className={styles.container}>
+        <>
             <Head>
                 <title>
                     Merit Education clone ingliz tili o&#039;quv markazi haqida
@@ -13,7 +12,7 @@ export default function Home() {
                 <link
                     rel="preconnect"
                     href="https://fonts.gstatic.com"
-                    crossorigin
+                    crossOrigin
                 />
                 <link
                     href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
@@ -28,6 +27,6 @@ export default function Home() {
             <div>
                 <h1>Salom hammaga</h1>
             </div>
-        </div>
+        </>
     );
 }

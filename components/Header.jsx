@@ -1,17 +1,44 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState } from 'react';
 import style from '../styles/index.module.css';
 import styles from '../styles/header.module.css';
 
 import logo from '../public/img/main/logo.png';
+import logoOq from '../public/img/main/logo_oq.png';
 import telegram from '../public/icon/main/telegram-plane-brands.svg';
 import facebook from '../public/icon/main/facebook-f-brands.svg';
 import instagram from '../public/icon/main/instagram-brands.svg';
 import telephone from '../public/icon/main/square-phone-solid.svg';
 import clock from '../public/icon/main/clock-regular.svg';
 import uzb from '../public/img/main/UZ-Uzbekistan-Flag-icon.png';
+import bars from '../public/icon/main/bars-solid.svg';
+import xicon from '../public/icon/main/xmark-solid.svg';
+
+const categorys = [
+    { name: 'Bosh sahifa', isActive: true, path: '/' },
+    { name: 'Biz haqimizda', isActive: false, path: '/' },
+    { name: 'Kurslar', isActive: false, path: '/' },
+    { name: 'Voqealar', isActive: false, path: '/' },
+    { name: 'Yangiliklar', isActive: false, path: '/' },
+    { name: 'Bizning ustozlarimiz', isActive: false, path: '/' },
+    { name: 'Kontaktlar', isActive: false, path: '/' },
+];
+
+const callNumber = [
+    { number: '+99 890 377 89 90' },
+    { number: '+99 890 267 89 90' },
+];
+
+const workTime = [{ time: 'Du-Sh 10:00-20:00' }];
 
 const Header = () => {
+    const [isOpen, setIsOpen] = useState(true);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
+
     return (
         <header>
             <div className={styles.top}>
@@ -66,12 +93,9 @@ const Header = () => {
                 <div className={style.container}>
                     <div className={styles.flex}>
                         <Link href="/">
-                            <Image
-                                className={styles.logo}
-                                height={58}
-                                width={180}
-                                src={logo}
-                            />
+                            <a className={styles.logo}>
+                                <Image height={58} width={180} src={logo} />
+                            </a>
                         </Link>
                         <ul className={styles.connection}>
                             <li className={styles.d_flex}>
@@ -85,7 +109,7 @@ const Header = () => {
                                     <p className={styles.gray}>
                                         BIZGA QO'NG'IROQ QILING!
                                     </p>
-                                    <p>+99 8(90) 377 89 90</p>
+                                    <p>{callNumber[0].number}</p>
                                 </div>
                             </li>
                             <li className={styles.d_flex}>
@@ -97,7 +121,7 @@ const Header = () => {
                                 />
                                 <div className={styles.add}>
                                     <p className={styles.gray}>ISH VAQTI!</p>
-                                    <p>Du-Sh 10:00-20:00</p>
+                                    <p>{workTime[0].time}</p>
                                 </div>
                             </li>
                         </ul>
@@ -107,50 +131,78 @@ const Header = () => {
             <nav className={styles.navbar}>
                 <div className={style.container}>
                     <div className={styles.nav}>
-                        <ul className={styles.left}>
-                            <li>
-                                <Link href="/">
-                                    <a className={styles.active}>Bosh sahifa</a>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/about">
-                                    <a>Biz haqimizda</a>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/courses">
-                                    <a>Kurslar</a>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/events">
-                                    <a>Voqealar</a>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/news">
-                                    <a>Yangiliklar</a>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/teachers">
-                                    <a>Bizning ustozlarimiz</a>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/contacts">
-                                    <a>Kontaktlar</a>
-                                </Link>
-                            </li>
-                        </ul>
+                        <div className={styles.left}>
+                            <ul
+                                className={
+                                    isOpen ? 'toggleMenu active' : 'toggleMenu'
+                                }
+                            >
+                                {categorys.map((category) => {
+                                    return (
+                                        <li
+                                            className={styles.navbar_navlink}
+                                            key={category.name}
+                                        >
+                                            <Link href={category.path}>
+                                                <a
+                                                    className={
+                                                        category.isActive
+                                                            ? styles.active
+                                                            : null
+                                                    }
+                                                >
+                                                    {category.name}
+                                                </a>
+                                            </Link>
+                                        </li>
+                                    );
+                                })}
+                            </ul>
+                            <div
+                                className={isOpen ? 'exit close' : 'exit '}
+                                onClick={() => {
+                                    toggleMenu();
+                                }}
+                            >
+                                <Image
+                                    src={xicon}
+                                    width={32}
+                                    height={41}
+                                    className={styles.xicon}
+                                />
+                            </div>
+                        </div>
                         <ul className={styles.right}>
-                            <li>
+                            <li className={styles.degree_button}>
                                 <Link href="#">
                                     <a className={styles.degree}>
                                         Darajangizni bilib oling
                                     </a>
                                 </Link>
+                            </li>
+                            <li className={styles.navbar_logo}>
+                                <Link href="/">
+                                    <a className={styles.navbar_logo_link}>
+                                        <Image
+                                            height={58}
+                                            width={180}
+                                            src={logoOq}
+                                        />
+                                    </a>
+                                </Link>
+                            </li>
+                            <li
+                                className={styles.bars_menu}
+                                onClick={() => {
+                                    toggleMenu();
+                                }}
+                            >
+                                <Image
+                                    src={bars}
+                                    width={31}
+                                    height={37}
+                                    className={styles.filter_white_bars}
+                                />
                             </li>
                         </ul>
                     </div>
