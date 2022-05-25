@@ -81,16 +81,6 @@
         brightness(108%) contrast(102%);
 }
 
-.filter_white_bars {
-    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(342deg)
-        brightness(108%) contrast(102%);
-}
-
-.xicon {
-    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(342deg)
-        brightness(108%) contrast(102%);
-}
-
 .bars_menu {
     display: none;
 }

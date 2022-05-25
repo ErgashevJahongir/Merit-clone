@@ -168,7 +168,7 @@ const Header = () => {
                                     src={xicon}
                                     width={32}
                                     height={41}
-                                    className={styles.xicon}
+                                    className={styles.filter_white}
                                 />
                             </div>
                         </div>
@@ -201,7 +201,7 @@ const Header = () => {
                                     src={bars}
                                     width={31}
                                     height={37}
-                                    className={styles.filter_white_bars}
+                                    className={styles.filter_white}
                                 />
                             </li>
                         </ul>
