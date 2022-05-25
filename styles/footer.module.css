@@ -1,0 +1,134 @@
+.footer {
+    background-color: rgb(40, 40, 40);
+    padding-top: 70px;
+    padding-bottom: 30px;
+}
+
+.footer ul li {
+    list-style-type: none;
+}
+
+.footer_menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.card {
+    padding: 0 15px;
+}
+
+.card h4 {
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.card h5 {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.card ul {
+    margin-top: 13px;
+    list-style: outside none none;
+    margin-top: 13px;
+    padding-left: 0;
+    margin-bottom: 30px;
+}
+
+.mapli {
+    display: flex;
+    align-items: center;
+}
+
+.card .location li {
+    border-bottom: none;
+    margin-right: 15px;
+}
+
+.card ul li {
+    color: gray;
+    border-bottom: 1px dashed #404040;
+    margin-bottom: 8px;
+    padding-top: 5px;
+    padding-bottom: 8px;
+    font-weight: 500;
+}
+
+.card ul li a {
+    transition: all 0.3s ease-in;
+}
+
+.card ul li a:hover,
+.card ul li a:focus {
+    color: #666;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.card .social li {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.social li a {
+    padding-right: 15px;
+    filter: invert(51%) sepia(11%) saturate(15%) hue-rotate(28deg)
+        brightness(97%) contrast(83%);
+    text-decoration: none;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social li a:hover {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(342deg)
+        brightness(108%) contrast(102%);
+}
+
+.pink {
+    filter: invert(40%) sepia(89%) saturate(7244%) hue-rotate(334deg)
+        brightness(95%) contrast(101%);
+    padding-right: 5px !important;
+}
+
+@media screen and (max-width: 1170px) {
+}
+
+@media screen and (max-width: 970px) {
+    .footer_menu {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer_menu {
+        grid-template-columns: 1fr;
+        grid-template-rows: 4fr 5fr 2fr 2fr;
+    }
+    .location {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .card ul {
+        margin-bottom: 0;
+    }
+    .logo {
+        width: 70% !important;
+        margin: 0 !important;
+        min-width: auto !important;
+    }
+}
