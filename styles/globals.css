@@ -2,8 +2,10 @@ html,
 body {
     padding: 0;
     margin: 0;
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 14px;
+    line-height: 1.7;
+    color: #666;
 }
 
 a {
@@ -15,4 +17,40 @@ a {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+
+.toggleMenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exit {
+    z-index: 9999;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+}
+
+.exit.close {
+    display: none;
+}
+
+@media screen and (max-width: 970px) {
+    .toggleMenu.active {
+        display: none;
+    }
+
+    .toggleMenu {
+        flex-direction: column;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        top: 0;
+        background-color: rgba(32, 44, 69, 0.9);
+        z-index: 999;
+    }
 }
