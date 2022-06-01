@@ -3,6 +3,7 @@
     grid-template-columns: 2fr 1fr;
     gap: 30px;
     margin-top: 50px;
+    margin-bottom: 70px;
 }
 
 .course h5 {
@@ -51,7 +52,8 @@
 
 .links h4 {
     position: relative;
-    font-size: 24px;
+    font-size: 18px;
+    font-weight: 400;
     margin-top: 10px;
     margin-bottom: 20px;
     padding-bottom: 10px;
@@ -65,4 +67,39 @@
     position: absolute;
     width: 50px;
     background: #202c45;
+}
+
+.links ul li {
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed #d3d3d3;
+    font-weight: 500;
+}
+
+.registr {
+    background: #202c45;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    width: 270px;
+    height: 48px;
+    border-radius: 4px;
+    color: #fff !important;
+    transition: 0.3s;
+    margin-top: 15px;
+}
+
+.registr:hover {
+    background: #f2184f;
+    color: #fff !important;
+}
+
+@media screen and (max-width: 970px) {
+    .course {
+        display: flex;
+        flex-direction: column;
+    }
 }

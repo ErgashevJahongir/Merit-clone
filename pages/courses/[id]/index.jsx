@@ -93,6 +93,11 @@ const index = () => {
                                     <span>Narxi : </span>
                                     {cours.price}
                                 </h4>
+                                <Link href="#">
+                                    <a className={styled.registr}>
+                                        DEMO-DARSGA RO`YHATDAN O'TISH
+                                    </a>
+                                </Link>
                             </div>
                             <div className={styled.links}>
                                 <h4>Boshqa kurslar</h4>
