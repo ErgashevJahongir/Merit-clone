@@ -1,0 +1,19 @@
+.h2{
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    font-weight: 600;
+}
+.video{
+    width: 100%;
+    height: auto;
+}
+.boxes{
+    display: flex;
+    align-items: center;
+}
+.box2 iframe{
+    width: 650px;
+    height: 350px;
+    border: 0;
+}

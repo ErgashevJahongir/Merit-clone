@@ -1,5 +1,4 @@
 import React from 'react'
-import Link  from 'next/link';
 import style from '../styles/index.module.css';
 import styless from '../styles/contacts.module.css'
 import { useState } from 'react';
