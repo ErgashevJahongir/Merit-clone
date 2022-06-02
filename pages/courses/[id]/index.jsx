@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import styles from '../../../styles/index.module.css';
 import styled from '../../../styles/courseId.module.css';
 import Image from 'next/image';
+import { useEffect } from 'react';
 
 const course = [
     {
@@ -70,6 +71,8 @@ const course = [
 const index = () => {
     const router = useRouter();
     const { id } = router.query;
+    let son = 0;
+
     return (
         <div className={styles.container}>
             {course.map((cours) => {
@@ -123,6 +126,13 @@ const index = () => {
                             </div>
                         </div>
                     );
+                } else {
+                    son += 1;
+                }
+                if (son === course.length) {
+                    useEffect(() => {
+                        router.push('/404');
+                    }, []);
                 }
             })}
         </div>

@@ -1,0 +1,88 @@
+.new {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+.new h5 {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.new p {
+    margin-bottom: 10px;
+}
+
+.links ul li {
+    list-style-type: none;
+}
+
+.title {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.title::after {
+    bottom: 0;
+    content: '';
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 50px;
+    background: #f2184f;
+}
+
+.price {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.price span {
+    color: #f2184f;
+}
+
+.links h4 {
+    position: relative;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.links h4::after {
+    bottom: 0;
+    content: '';
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 50px;
+    background: #202c45;
+}
+
+.links ul li {
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed #d3d3d3;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 970px) {
+    .new {
+        display: flex;
+        flex-direction: column;
+    }
+}
