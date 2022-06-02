@@ -1,7 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import style from './../styles/index.module.css';
-import styles from './../styles/news.module.css';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
+
+import style from './../../../styles/index.module.css';
+import styles from './../../../styles/newsId.module.css';
 
 const yangiliklar = [
     {
@@ -60,39 +63,67 @@ const yangiliklar = [
     },
 ];
 
-const news = () => {
+const index = () => {
+    const router = useRouter();
+    const { id } = router.query;
+
+    let son = 0;
     return (
         <div className={style.container}>
-            <div className={styles.news}>
-                {yangiliklar.map((item, index) => {
+            {yangiliklar.map((news, index) => {
+                if (news.newId.toLocaleString() === id) {
                     return (
-                        <div className={styles.new} key={index}>
-                            <div className={styles.img}>
+                        <div key={index} className={styles.new}>
+                            <div>
                                 <Image
-                                    src={item.img}
-                                    alt={item.title}
-                                    width={740}
-                                    height={450}
+                                    src={news.img}
+                                    alt={news.title}
+                                    width={750}
+                                    height={500}
                                     layout="intrinsic"
                                 />
+                                <h3 className={styles.title}>{news.title}</h3>
+                                <p>
+                                    <span>{news.date}</span>
+                                </p>
+                                <h5>{news.sometitle}</h5>
+                                <p>{news.discription}</p>
                             </div>
-                            <div className={styles.news_info}>
-                                <h3 className={styles.newsName}>
-                                    {item.title}
-                                </h3>
-                                <p>{item.date}</p>
-                                <Link href={`/news/${item.newId}`}>
-                                    <a className={styles.link}>
-                                        Batafsil ma'lumot
-                                    </a>
-                                </Link>
+                            <div className={styles.links}>
+                                <h4>Boshqa kurslar</h4>
+                                <ul>
+                                    <li>
+                                        <Link href="/">
+                                            Individual ingliz tili kurslari
+                                            Toshkentda
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/">
+                                            Ingliz tili kurslari
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/">
+                                            Toshkentda IELTS imtihoniga
+                                            tayyorlanish kurslari
+                                        </Link>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     );
-                })}
-            </div>
+                } else {
+                    son += 1;
+                }
+                if (son === yangiliklar.length) {
+                    useEffect(() => {
+                        router.push('/404');
+                    }, []);
+                }
+            })}
         </div>
     );
 };
 
-export default news;
+export default index;
