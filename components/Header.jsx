@@ -17,10 +17,10 @@ import xicon from '../public/icon/main/xmark-solid.svg';
 
 const categorys = [
     { name: 'Bosh sahifa', isActive: true, path: '/' },
-    { name: 'Biz haqimizda', isActive: false, path: '/about' },
+    { name: 'Biz haqimizda', isActive: false, path: '/about ' },
     { name: 'Kurslar', isActive: false, path: '/courses' },
-    { name: 'Yangiliklar', isActive: false, path: '/' },
-    { name: 'Bizning ustozlarimiz', isActive: false, path: '/' },
+    { name: 'Yangiliklar', isActive: false, path: '/news' },
+    { name: 'Bizning ustozlarimiz', isActive: false, path: '/teachers' },
     { name: 'Kontaktlar', isActive: false, path: '/contacts' },
 ];
 
