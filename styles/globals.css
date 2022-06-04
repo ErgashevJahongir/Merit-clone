@@ -36,6 +36,10 @@ a {
     display: none;
 }
 
+.slick-dots li button:before {
+    font-size: 10px !important;
+}
+
 @media screen and (max-width: 970px) {
     .toggleMenu.active {
         display: none;

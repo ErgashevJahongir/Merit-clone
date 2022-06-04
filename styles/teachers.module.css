@@ -27,7 +27,7 @@
 .teacherName::after {
     bottom: 0;
     content: '';
-    height: 2px;
+    height: 1px;
     left: 0;
     position: absolute;
     width: 50px;
