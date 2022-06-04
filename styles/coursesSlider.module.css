@@ -1,0 +1,107 @@
+.coursesSlider h2 {
+    font-size: 28px;
+    position: relative;
+    margin: 0 15px 40px;
+    padding-bottom: 10px;
+}
+
+.coursesSlider h2::after {
+    background: #f2184f;
+    bottom: -1px;
+    content: '';
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 50px;
+}
+
+.content {
+    padding: 0 10px 20px;
+    position: relative;
+}
+
+.title {
+    padding: 12px 20px 20px;
+    border: 1px solid #eee;
+    margin-top: -7px;
+}
+
+.name {
+    font-size: 18px;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    font-weight: 500;
+    color: #333;
+    position: relative;
+}
+
+.name::after {
+    bottom: -1px;
+    content: '';
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 50px;
+    background: #f2184f;
+}
+
+.price {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    right: 10px;
+    padding: 5px 10px;
+    position: absolute;
+    top: -1px;
+    background: rgba(32, 44, 69, 0.7);
+    border-left: 3px solid #f2184f;
+}
+
+.someTitle {
+    margin-bottom: 10px;
+}
+
+.link {
+    color: #fff;
+    background-color: #202c45;
+    border-color: #202c45;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px 25px;
+    margin-top: 10px;
+    display: inline-block;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.newslink {
+    color: #fff;
+    background-color: #202c45;
+    border-color: #202c45;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px 25px;
+    margin-top: 10px;
+    display: inline-block;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 970px) {
+    .content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    .title {
+        padding-top: 0;
+    }
+}
