@@ -1,4 +1,11 @@
 import Head from 'next/head';
+import Slider from 'react-slick';
+
+import style from './../styles/index.module.css';
+import styles from './../styles/home.module.css';
+import CoursesSlider from '../components/Home/CoursesSlider';
+import TeachersSlider from '../components/Home/TeachersSlider';
+import NewsSlider from '../components/Home/NewsSlider';
 
 export default function Home() {
     return (
@@ -25,7 +32,21 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div>
-                <h1>Salom hammaga</h1>
+                <section className={styles.courses}>
+                    <div className={style.container}>
+                        <CoursesSlider />
+                    </div>
+                </section>
+                <section className={styles.courses}>
+                    <div className={style.container}>
+                        <TeachersSlider />
+                    </div>
+                </section>
+                <section className={styles.courses}>
+                    <div className={style.container}>
+                        <NewsSlider />
+                    </div>
+                </section>
             </div>
         </>
     );
