@@ -93,14 +93,10 @@ const course = [
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
-        <div
+        <button
             className={className}
             style={{
                 ...style,
-                display: 'block',
-                // background: '#CB2A59',
-                fontSize: '30px',
-                color: '#CB2A59',
             }}
             onClick={onClick}
         />
@@ -110,14 +106,11 @@ function SampleNextArrow(props) {
 function SamplePrevArrow(props) {
     const { className, style, onClick } = props;
     return (
-        <div
+        <button
             className={className}
             style={{
                 ...style,
-                display: 'block',
                 zIndex: '999',
-                // background: '#CB2A59',
-                color: '#CB2A59',
             }}
             onClick={onClick}
         />
