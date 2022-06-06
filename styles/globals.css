@@ -40,6 +40,14 @@ a {
     font-size: 10px !important;
 }
 
+.slick-next {
+    right: 50px !important;
+}
+
+.slick-prev {
+    left: 50px !important;
+}
+
 @media screen and (max-width: 970px) {
     .toggleMenu.active {
         display: none;

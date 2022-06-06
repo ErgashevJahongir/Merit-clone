@@ -1,8 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Slider from 'react-slick';
+import { FaLongArrowAltRight } from 'react-icons/fa';
 
-import styles from './../../styles/coursesSlider.module.css';
+import styles from './../../styles/mainSlider.module.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -11,7 +12,7 @@ const course = [
         courseId: 1,
         courseName: 'Individual ingliz tili kurslari Toshkentda',
         courseImg:
-            'https://merit.uz/uz/yii2images/images/image-by-item-and-alias?item=Courses3&dirtyAlias=6aab1fe857-1.jpg',
+            'https://merit.uz/uz/yii2images/images/image-by-item-and-alias?item=Slider4&dirtyAlias=fc13d7f828-1_1920x1280.png',
         price: "1 700 000 so'm",
         sometitle:
             "Individual ingliz tili kurslari Toshkentda || Merit Education o'quv markazi",
@@ -28,7 +29,7 @@ const course = [
         courseId: 2,
         courseName: 'Ingliz tili kurslari',
         courseImg:
-            'https://merit.uz/uz/yii2images/images/image-by-item-and-alias?item=Courses3&dirtyAlias=6aab1fe857-1.jpg',
+            'https://merit.uz/uz/yii2images/images/image-by-item-and-alias?item=Slider4&dirtyAlias=fc13d7f828-1_1920x1280.png',
         price: "585 000 so'm",
         sometitle: "Ingliz tili kurslari || Merit Education o'quv markazi",
         fullTitle: ` Ingliz tilini bilish allaqachon ehtiyojga aylanib ulgurgan. Axir, ingliz tilini bilgan odam uchun katta imkoniyatlar ochiladi, chet elliklar bilan oddiy muloqotdan tortib, chet el mamlakatlarida ishlashgacha.
@@ -51,7 +52,7 @@ const course = [
         courseId: 3,
         courseName: 'Toshkentda IELTS imtihoniga tayyorlanish kurslari',
         courseImg:
-            'https://merit.uz/uz/yii2images/images/image-by-item-and-alias?item=Courses3&dirtyAlias=6aab1fe857-1.jpg',
+            'https://merit.uz/uz/yii2images/images/image-by-item-and-alias?item=Slider4&dirtyAlias=fc13d7f828-1_1920x1280.png',
         price: "585 000 so'm",
         sometitle:
             "Toshkentda IELTSga tayyorlanish kurslari || Merit Education o'quv markazi",
@@ -71,7 +72,7 @@ const course = [
         courseId: 4,
         courseName: 'Toshkentda IELTS imtihoniga tayyorlanish kurslari',
         courseImg:
-            'https://merit.uz/uz/yii2images/images/image-by-item-and-alias?item=Courses3&dirtyAlias=6aab1fe857-1.jpg',
+            'https://merit.uz/uz/yii2images/images/image-by-item-and-alias?item=Slider4&dirtyAlias=fc13d7f828-1_1920x1280.png',
         price: "585 000 so'm",
         sometitle:
             "Toshkentda IELTSga tayyorlanish kurslari || Merit Education o'quv markazi",
@@ -89,77 +90,91 @@ const course = [
     },
 ];
 
-const CoursesSlider = () => {
+function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+        <div
+            className={className}
+            style={{
+                ...style,
+                display: 'block',
+                // background: '#CB2A59',
+                fontSize: '30px',
+                color: '#CB2A59',
+            }}
+            onClick={onClick}
+        />
+    );
+}
+
+function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+        <div
+            className={className}
+            style={{
+                ...style,
+                display: 'block',
+                zIndex: '999',
+                // background: '#CB2A59',
+                color: '#CB2A59',
+            }}
+            onClick={onClick}
+        />
+    );
+}
+
+const MainSlider = () => {
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        pauseOnHover: true,
-        responsive: [
-            {
-                breakpoint: 970,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                },
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                },
-            },
-        ],
+        // autoplay: true,
+        // autoplaySpeed: 5000,
+        // pauseOnHover: true,
+        nextArrow: <SampleNextArrow />,
+        prevArrow: <SamplePrevArrow />,
     };
     return (
-        <div className={styles.coursesSlider}>
-            <h2>Kurslar</h2>
-            <div className={styles.slider}>
-                <Slider {...settings}>
-                    {course.map((cours) => {
-                        return (
-                            <div key={cours.courseId}>
-                                <div className={styles.content}>
-                                    <div>
-                                        <Image
-                                            src={cours.courseImg}
-                                            alt={cours.sometitle}
-                                            layout="intrinsic"
-                                            height={720}
-                                            width={720}
-                                        />
-                                    </div>
-                                    <div className={styles.title}>
-                                        <h3 className={styles.name}>
-                                            {cours.courseName}
-                                        </h3>
-                                        <h3 className={styles.price}>
-                                            {cours.price}
-                                        </h3>
-                                        <p className={styles.someTitle}>
-                                            {cours.sometitle}
-                                        </p>
-                                        <Link
-                                            href={`/courses/${cours.courseId}`}
-                                        >
-                                            <a className={styles.link}>
-                                                batafsil ma'lumot
-                                            </a>
-                                        </Link>
-                                    </div>
+        <div className={styles.sliders}>
+            <Slider {...settings}>
+                {course.map((cours) => {
+                    return (
+                        <div key={cours.courseId}>
+                            <div className={styles.slider}>
+                                <div className={styles.image}>
+                                    <Image
+                                        src={cours.courseImg}
+                                        alt={cours.sometitle}
+                                        height={600}
+                                        width={1440}
+                                        layout="responsive"
+                                        className={styles.sliderImg}
+                                    />
+                                </div>
+                                <div className={styles.title}>
+                                    <h1 className={styles.slidName}>
+                                        {cours.courseName}
+                                    </h1>
+                                    <p className={styles.someTitle}>
+                                        {cours.sometitle}
+                                    </p>
+                                    <Link href={`/courses/${cours.courseId}`}>
+                                        <a className={styles.link}>
+                                            batafsil ma'lumot
+                                            <FaLongArrowAltRight />
+                                        </a>
+                                    </Link>
                                 </div>
                             </div>
-                        );
-                    })}
-                </Slider>
-            </div>
+                        </div>
+                    );
+                })}
+            </Slider>
         </div>
     );
 };
 
-export default CoursesSlider;
+export default MainSlider;
