@@ -25,6 +25,7 @@ const contacts = () => {
         },
     ]);
 
+
     return (
         <div>
             <div className={style.container}>
