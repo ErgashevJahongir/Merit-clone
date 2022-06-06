@@ -6,6 +6,7 @@ import styles from './../styles/home.module.css';
 import CoursesSlider from '../components/Home/CoursesSlider';
 import TeachersSlider from '../components/Home/TeachersSlider';
 import NewsSlider from '../components/Home/NewsSlider';
+import MainSlider from '../components/Home/MainSlider';
 
 export default function Home() {
     return (
@@ -32,6 +33,9 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div>
+                <section>
+                    <MainSlider />
+                </section>
                 <section className={styles.courses}>
                     <div className={style.container}>
                         <CoursesSlider />

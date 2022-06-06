@@ -74,6 +74,29 @@ const TeachersSlider = () => {
         autoplay: true,
         autoplaySpeed: 5000,
         pauseOnHover: true,
+        responsive: [
+            {
+                breakpoint: 1170,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 870,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 550,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
     };
     return (
         <div className={styles.coursesSlider}>
@@ -94,7 +117,7 @@ const TeachersSlider = () => {
                                         />
                                     </div>
                                     <div className={styles.title}>
-                                        <h3 className={styles.name}>
+                                        <h3 className={styles.techname}>
                                             {teach.name}
                                         </h3>
                                         <p className={styles.someTitle}>
