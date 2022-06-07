@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useRouter } from 'next/router';
+import { useState, useEffect } from 'react';
 import style from '../styles/index.module.css';
 import styles from '../styles/header.module.css';
 
@@ -33,6 +34,12 @@ const workTime = [{ time: 'Du-Sh 10:00-20:00' }];
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(true);
+
+    let location = useRouter().pathname;
+
+    useEffect(() => {
+        setIsOpen(!isOpen);
+    }, [location]);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -173,7 +180,7 @@ const Header = () => {
                         </div>
                         <ul className={styles.right}>
                             <li className={styles.degree_button}>
-                                <Link href="#">
+                                <Link href="https://merit.uz/web/test/">
                                     <a className={styles.degree}>
                                         Darajangizni bilib oling
                                     </a>

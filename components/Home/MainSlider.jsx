@@ -138,14 +138,14 @@ const MainSlider = () => {
                         <div key={cours.courseId}>
                             <div className={styles.slider}>
                                 <div className={styles.image}>
-                                    <Image
+                                    {/* <Image
                                         src={cours.courseImg}
                                         alt={cours.sometitle}
                                         height={600}
                                         width={1440}
                                         layout="responsive"
                                         className={styles.sliderImg}
-                                    />
+                                    /> */}
                                 </div>
                                 <div className={styles.title}>
                                     <h1 className={styles.slidName}>

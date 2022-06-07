@@ -7,6 +7,7 @@ import CoursesSlider from '../components/Home/CoursesSlider';
 import TeachersSlider from '../components/Home/TeachersSlider';
 import NewsSlider from '../components/Home/NewsSlider';
 import MainSlider from '../components/Home/MainSlider';
+import React from 'react';
 
 export default function Home() {
     return (
@@ -36,21 +37,23 @@ export default function Home() {
                 <section>
                     <MainSlider />
                 </section>
-                <section className={styles.courses}>
-                    <div className={style.container}>
-                        <CoursesSlider />
-                    </div>
-                </section>
-                <section className={styles.courses}>
-                    <div className={style.container}>
-                        <TeachersSlider />
-                    </div>
-                </section>
-                <section className={styles.courses}>
-                    <div className={style.container}>
-                        <NewsSlider />
-                    </div>
-                </section>
+                <div className="main">
+                    <section className={styles.courses}>
+                        <div className={style.container}>
+                            <CoursesSlider />
+                        </div>
+                    </section>
+                    <section className={styles.courses}>
+                        <div className={style.container}>
+                            <TeachersSlider />
+                        </div>
+                    </section>
+                    <section className={styles.courses}>
+                        <div className={style.container}>
+                            <NewsSlider />
+                        </div>
+                    </section>
+                </div>
             </div>
         </>
     );

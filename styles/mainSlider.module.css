@@ -8,12 +8,24 @@
 
 .image {
     position: absolute;
-    /* left: 300%; */
     top: -40px;
     content: '';
-    background: rgba(32, 44, 69, 0.7);
+    background-image: url('https://merit.uz/uz/yii2images/images/image-by-item-and-alias?item=Slider4&dirtyAlias=fc13d7f828-1_1920x1280.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
     width: 100%;
     height: 108%;
+}
+
+.image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(32, 44, 69, 0.7);
 }
 
 .sliderImg {
@@ -70,7 +82,26 @@
     color: #404040;
 }
 
-/* .leftIcon::before,
-.rightIcon::before {
-    font-size: 30px;
-} */
+@media screen and (max-width: 970px) {
+    .slidName {
+        word-wrap: break-word;
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+    .someTitle {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    .link {
+        margin-top: 20px;
+    }
+    .title {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        padding: 0 30px;
+    }
+}
