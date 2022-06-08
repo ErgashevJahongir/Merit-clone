@@ -4,6 +4,7 @@ import style from '../styles/index.module.css';
 import Link from 'next/link'
 import aboutStyle from '../styles/about.module.css'
 import { useState } from 'react';
+import Accardion1 from '../components/about/Accardion';
 const about = () => {
     const [state, setState] = useState([
         {
@@ -102,6 +103,11 @@ const about = () => {
                             </div>
                         )
                     })}
+                </div>
+                <div className={aboutStyle.box4}>
+                    <h3>Nimaga bizni tanlashadi </h3>
+                    <p>Biz haqimizda ko'proq biling</p>
+                    <Accardion1 />
                 </div>
             </div>
         </div>
