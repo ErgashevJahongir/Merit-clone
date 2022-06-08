@@ -8,6 +8,7 @@ import TeachersSlider from '../components/Home/TeachersSlider';
 import NewsSlider from '../components/Home/NewsSlider';
 import MainSlider from '../components/Home/MainSlider';
 import React from 'react';
+import Facts from '../components/Home/Facts';
 
 export default function Home() {
     return (
@@ -42,6 +43,9 @@ export default function Home() {
                         <div className={style.container}>
                             <CoursesSlider />
                         </div>
+                    </section>
+                    <section>
+                        <Facts />
                     </section>
                     <section className={styles.courses}>
                         <div className={style.container}>
