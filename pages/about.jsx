@@ -106,7 +106,7 @@ const about = () => {
                 </div>
                 <div className={aboutStyle.box4}>
                     <h3>Nimaga bizni tanlashadi </h3>
-                    <p>Biz haqimizda ko'proq biling</p>
+                    <p className={aboutStyle.text}>Biz haqimizda ko'proq biling</p>
                     <Accardion1 />
                 </div>
             </div>
