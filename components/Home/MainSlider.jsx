@@ -124,9 +124,9 @@ const MainSlider = () => {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        // autoplay: true,
-        // autoplaySpeed: 5000,
-        // pauseOnHover: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        pauseOnHover: true,
         nextArrow: <SampleNextArrow />,
         prevArrow: <SamplePrevArrow />,
     };
@@ -137,16 +137,7 @@ const MainSlider = () => {
                     return (
                         <div key={cours.courseId}>
                             <div className={styles.slider}>
-                                <div className={styles.image}>
-                                    {/* <Image
-                                        src={cours.courseImg}
-                                        alt={cours.sometitle}
-                                        height={600}
-                                        width={1440}
-                                        layout="responsive"
-                                        className={styles.sliderImg}
-                                    /> */}
-                                </div>
+                                <div className={styles.image}></div>
                                 <div className={styles.title}>
                                     <h1 className={styles.slidName}>
                                         {cours.courseName}

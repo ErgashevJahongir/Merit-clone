@@ -25,9 +25,8 @@ const contacts = () => {
         },
     ]);
 
-
     return (
-        <div>
+        <div className={styless.contact}>
             <div className={style.container}>
                 <div className={styless.container}>
                     {data?.map((item, id) => {
