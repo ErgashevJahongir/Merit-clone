@@ -1,0 +1,96 @@
+.facts {
+    padding: 70px 0;
+    background: url('https://merit.uz/images/bg2.jpg');
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+    background-repeat: repeat-y;
+    position: relative;
+}
+
+.facts::before {
+    background-color: rgba(32, 44, 69, 0.9);
+    content: ' ';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+.fact {
+    padding: 0 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    z-index: 5555;
+    position: relative;
+}
+
+.item {
+    text-align: center;
+    color: #fff;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.icon {
+    font-size: 50px;
+}
+
+.piece {
+    margin: 15px 0;
+}
+
+.piece svg {
+    font-size: 50px;
+}
+
+.piece h2 {
+    font-weight: 500;
+    line-height: 1.42857143;
+    margin-bottom: 10px;
+    font-size: 32px;
+}
+
+.piece h2 pre {
+    display: inline-block;
+    font-size: 32px;
+}
+
+.piece h4 {
+    font-weight: 500;
+    line-height: 1.42857143;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 970px) {
+    .fact {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .fact {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .piece h2 {
+        font-weight: 800;
+        font-size: 48px;
+    }
+
+    .piece h2 pre {
+        font-size: 55px;
+    }
+
+    .piece svg {
+        width: 130px;
+        height: 100px;
+    }
+
+    .piece h4 {
+        font-size: 18px;
+    }
+}

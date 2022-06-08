@@ -6,6 +6,8 @@ import styles from './../../styles/coursesSlider.module.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+import { FaLongArrowAltRight } from 'react-icons/fa';
+
 const yangiliklar = [
     {
         title: 'Новость 1',
@@ -73,10 +75,28 @@ const NewsSlider = () => {
         autoplay: true,
         autoplaySpeed: 5000,
         pauseOnHover: true,
+        responsive: [
+            {
+                breakpoint: 970,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
     };
     return (
         <div className={styles.coursesSlider}>
-            <h2>Oxirgi Yangiliklar</h2>
+            <h2>
+                Oxirgi <span>Yangiliklar</span>
+            </h2>
             <div className={styles.slider}>
                 <Slider {...settings}>
                     {yangiliklar.map((news) => {
@@ -93,16 +113,24 @@ const NewsSlider = () => {
                                                 width={720}
                                             />
                                         </div>
-                                        <div className={styles.title}>
-                                            <h3 className={styles.name}>
-                                                {news.title}
+                                        <div className={styles.newstitle}>
+                                            <h3 className={styles.newsname}>
+                                                <Link
+                                                    href={`/news/${news.newId}`}
+                                                >
+                                                    <a>{news.title}</a>
+                                                </Link>
                                             </h3>
-                                            <p className={styles.someTitle}>
+                                            <p className={styles.date}>
                                                 {news.date}
+                                            </p>
+                                            <p className={styles.newssomeTitle}>
+                                                {news.sometitle}
                                             </p>
                                             <Link href={`/news/${news.newId}`}>
                                                 <a className={styles.newslink}>
                                                     batafsil ma'lumot
+                                                    <FaLongArrowAltRight />
                                                 </a>
                                             </Link>
                                         </div>
