@@ -43,7 +43,8 @@
 }
 
 .piece svg {
-    font-size: 50px;
+    width: 58px;
+    height: 45px;
 }
 
 .piece h2 {
