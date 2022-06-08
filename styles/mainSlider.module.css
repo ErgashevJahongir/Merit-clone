@@ -82,6 +82,7 @@
     color: #404040;
 }
 
+<<<<<<< HEAD
 @media screen and (max-width: 970px) {
     .slidName {
         word-wrap: break-word;
@@ -105,3 +106,9 @@
         padding: 0 30px;
     }
 }
+=======
+/* .leftIcon::before,
+.rightIcon::before {
+    font-size: 30px;
+} */
+>>>>>>> 7501561 (mainslider boshlangich kurinishi)
