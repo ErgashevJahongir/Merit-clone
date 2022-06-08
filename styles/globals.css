@@ -30,6 +30,7 @@ a {
     position: fixed;
     right: 20px;
     top: 20px;
+    display: none;
 }
 
 .exit.close {
@@ -84,6 +85,9 @@ a {
         top: 0;
         background-color: rgba(32, 44, 69, 0.9);
         z-index: 999;
+    }
+    .exit {
+        display: block;
     }
 }
 

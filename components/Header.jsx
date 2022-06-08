@@ -33,7 +33,7 @@ const callNumber = [
 const workTime = [{ time: 'Du-Sh 10:00-20:00' }];
 
 const Header = () => {
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
 
     let location = useRouter().pathname;
 
