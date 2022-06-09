@@ -9,7 +9,9 @@ function Layout({ children }) {
     return (
         <>
             <Header />
-            {location.pathname !== '/' ? <Breadcrumb /> : null}
+            {location.pathname !== '/' && location.pathname !== '/_error' ? (
+                <Breadcrumb />
+            ) : null}
             <main>{children}</main>
             <Footer />
         </>
