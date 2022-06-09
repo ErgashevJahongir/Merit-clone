@@ -129,7 +129,7 @@ const NewsSlider = () => {
                                             </p>
                                             <Link href={`/news/${news.newId}`}>
                                                 <a className={styles.newslink}>
-                                                    batafsil ma'lumot
+                                                    batafsil ma&apos;lumot
                                                     <FaLongArrowAltRight />
                                                 </a>
                                             </Link>

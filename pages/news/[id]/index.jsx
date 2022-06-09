@@ -63,7 +63,7 @@ const yangiliklar = [
     },
 ];
 
-const index = () => {
+const Index = () => {
     const router = useRouter();
     const { id } = router.query;
 
@@ -126,4 +126,4 @@ const index = () => {
     );
 };
 
-export default index;
+export default Index;

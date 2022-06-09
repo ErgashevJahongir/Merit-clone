@@ -148,7 +148,7 @@ const CoursesSlider = () => {
                                             href={`/courses/${cours.courseId}`}
                                         >
                                             <a className={styles.link}>
-                                                batafsil ma'lumot
+                                                batafsil ma&apos;lumot
                                             </a>
                                         </Link>
                                     </div>

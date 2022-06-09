@@ -68,7 +68,7 @@ const course = [
     },
 ];
 
-const index = () => {
+const Index = () => {
     const router = useRouter();
     const { id } = router.query;
     let son = 0;
@@ -98,7 +98,7 @@ const index = () => {
                                 </h4>
                                 <Link href="#">
                                     <a className={styled.registr}>
-                                        DEMO-DARSGA RO`YHATDAN O'TISH
+                                        DEMO-DARSGA RO&apos;YHATDAN O&apos;TISH
                                     </a>
                                 </Link>
                             </div>
@@ -139,4 +139,4 @@ const index = () => {
     );
 };
 
-export default index;
+export default Index;
