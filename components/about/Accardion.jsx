@@ -39,10 +39,11 @@ const AccordionSummary = styled((props) => (
         padding: '12px 8px',
     },
     '& .css-1betqn-MuiAccordionSummary-content': {
-        margin: '0',
+        // margin: '0',
     },
     '& .MuiAccordionSummary-content': {
         padding: '14px 0 13px 8px',
+        margin: '0',
     },
     '& .MuiAccordionSummary-content.Mui-expanded': {
         backgroundColor: '#202C45',
