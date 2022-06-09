@@ -73,6 +73,12 @@ const Index = () => {
     const { id } = router.query;
     let son = 0;
 
+    const Callback = () => {
+        useEffect(() => {
+            router.push('/404');
+        }, []);
+    };
+
     return (
         <div className={styles.container}>
             {course.map((cours) => {
@@ -130,9 +136,7 @@ const Index = () => {
                     son += 1;
                 }
                 if (son === course.length) {
-                    useEffect(() => {
-                        router.push('/404');
-                    }, []);
+                    Callback();
                 }
             })}
         </div>
