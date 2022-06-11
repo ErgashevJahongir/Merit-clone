@@ -39,10 +39,11 @@ const AccordionSummary = styled((props) => (
         padding: '12px 8px',
     },
     '& .css-1betqn-MuiAccordionSummary-content': {
-        margin: '0',
+        // margin: '0',
     },
     '& .MuiAccordionSummary-content': {
         padding: '14px 0 13px 8px',
+        margin: '0',
     },
     '& .MuiAccordionSummary-content.Mui-expanded': {
         backgroundColor: '#202C45',
@@ -56,7 +57,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 }));
 
 export default function CustomizedAccordions() {
-    const [expand, setExpand] = useState([false, false, false, false])
+    const [expand, setExpand] = useState([false, false, false, false]);
 
     function handleClick(son) {
         if (son == 0) {
@@ -73,56 +74,83 @@ export default function CustomizedAccordions() {
 
     return (
         <div>
-            <Accordion >
-                <AccordionSummary aria-controls="panel1d-content" id="panel1d-header"
+            <Accordion>
+                <AccordionSummary
+                    aria-controls="panel1d-content"
+                    id="panel1d-header"
                     expandIcon={expand[0] ? <RemoveIcon /> : <AddSharpIcon />}
                     onClick={() => handleClick(0)}
                 >
-                    <Typography>Darslar qaysi tilda olib bo'riladi? </Typography>
+                    <Typography>
+                        Darslar qaysi tilda olib bo&apos;riladi?{' '}
+                    </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
-                        O'quvchilarni butunlay til muhiti bilan o'rab olish uchun darslar butunlay ingliz tilida o'tkaziladi.
+                        O&apos;quvchilarni butunlay til muhiti bilan o&apos;rab
+                        olish uchun darslar butunlay ingliz tilida
+                        o&apos;tkaziladi.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-            <Accordion >
-                <AccordionSummary aria-controls="panel2d-content" id="panel2d-header" onClick={() => handleClick(1)} expandIcon={expand[1] ? <RemoveIcon /> : <AddSharpIcon />}>
-                    <Typography>Kurslarda qatnashish uchun oyiga nech pul to'lash kerak? </Typography>
+            <Accordion>
+                <AccordionSummary
+                    aria-controls="panel2d-content"
+                    id="panel2d-header"
+                    onClick={() => handleClick(1)}
+                    expandIcon={expand[1] ? <RemoveIcon /> : <AddSharpIcon />}
+                >
+                    <Typography>
+                        Kurslarda qatnashish uchun oyiga nech pul to&apos;lash
+                        kerak?{' '}
+                    </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
-                        Ingliz tili kursi - 555 000 so'm
-                        IELTS imtihoniga tayyorlanish kursi - 555 000 so'm
-                        Math in English - 555 000 so'm
-                        Oliy o'quv yurtlariga tayyorlanish kursi - kelishiladi
-                        Individual ingliz tili kursi - 1 800 000 so'm
+                        Ingliz tili kursi - 555 000 so&apos;m IELTS imtihoniga
+                        tayyorlanish kursi - 555 000 so&apos;m Math in English -
+                        555 000 so&apos;m Oliy o&apos;quv yurtlariga
+                        tayyorlanish kursi - kelishiladi Individual ingliz tili
+                        kursi - 1 800 000 so&apos;m
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-            <Accordion >
-                <AccordionSummary aria-controls="panel3d-content" id="panel3d-header" onClick={() => handleClick(2)} expandIcon={expand[2] ? <RemoveIcon /> : <AddSharpIcon />}>
-                    <Typography>Sinov darsiga qanday qilib yozilsa bo'ladi? </Typography>
+            <Accordion>
+                <AccordionSummary
+                    aria-controls="panel3d-content"
+                    id="panel3d-header"
+                    onClick={() => handleClick(2)}
+                    expandIcon={expand[2] ? <RemoveIcon /> : <AddSharpIcon />}
+                >
+                    <Typography>
+                        Sinov darsiga qanday qilib yozilsa bo&apos;ladi?{' '}
+                    </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
-                        1 yo'l.
-                        O'quv markazimizga qo'ng'iroq qiling va zayavka qoldiring.
-
-                        2 yo'l.
-                        • "Bizning kurslarimiz" sahifasiga o'ting.
-                        • O'zingizga kerakli kursni tanlang
-                        • Kursning sahifasini pastida "Ro'yhatdan o'tish" ni bosing
+                        1 yo&apos;l. O&apos;quv markazimizga
+                        qo&apos;ng&apos;iroq qiling va zayavka qoldiring. 2
+                        yo&apos;l. • "Bizning kurslarimiz" sahifasiga
+                        o&apos;ting. • O&apos;zingizga kerakli kursni tanlang •
+                        Kursning sahifasini pastida "Ro&apos;yhatdan
+                        o&apos;tish" ni bosing
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-            <Accordion >
-                <AccordionSummary aria-controls="panel4d-content" id="panel4d-header" onClick={() => handleClick(3)} expandIcon={expand[3] ? <RemoveIcon /> : <AddSharpIcon />}>
-                    <Typography>Sinov darsi uchun pul to'lash kerakmi? </Typography>
+            <Accordion>
+                <AccordionSummary
+                    aria-controls="panel4d-content"
+                    id="panel4d-header"
+                    onClick={() => handleClick(3)}
+                    expandIcon={expand[3] ? <RemoveIcon /> : <AddSharpIcon />}
+                >
+                    <Typography>
+                        Sinov darsi uchun pul to&apos;lash kerakmi?{' '}
+                    </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
-                        Yo'q. Sinov darsi mutlaqo bepul.
+                        Yo&apos;q. Sinov darsi mutlaqo bepul.
                     </Typography>
                 </AccordionDetails>
             </Accordion>

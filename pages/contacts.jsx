@@ -3,7 +3,8 @@ import Link from 'next/link';
 import style from '../styles/index.module.css';
 import styless from '../styles/contacts.module.css';
 import { useState } from 'react';
-const contacts = () => {
+
+const Contacts = () => {
     const [data, setData] = useState([
         {
             id: 1,
@@ -62,4 +63,4 @@ const contacts = () => {
     );
 };
 
-export default contacts;
+export default Contacts;

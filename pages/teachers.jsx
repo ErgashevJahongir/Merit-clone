@@ -60,7 +60,7 @@ const teacher = [
     },
 ];
 
-const teachers = () => {
+const Teachers = () => {
     return (
         <div className={stayle.container}>
             <div className={styles.teachers}>
@@ -90,4 +90,4 @@ const teachers = () => {
     );
 };
 
-export default teachers;
+export default Teachers;

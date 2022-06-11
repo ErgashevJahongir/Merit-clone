@@ -63,9 +63,15 @@ const yangiliklar = [
     },
 ];
 
-const index = () => {
+const Index = () => {
     const router = useRouter();
     const { id } = router.query;
+
+    const Callback = () => {
+        useEffect(() => {
+            router.push('/404');
+        }, []);
+    };
 
     let son = 0;
     return (
@@ -117,13 +123,11 @@ const index = () => {
                     son += 1;
                 }
                 if (son === yangiliklar.length) {
-                    useEffect(() => {
-                        router.push('/404');
-                    }, []);
+                    Callback();
                 }
             })}
         </div>
     );
 };
 
-export default index;
+export default Index;

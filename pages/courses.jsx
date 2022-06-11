@@ -67,7 +67,7 @@ const course = [
     },
 ];
 
-const courses = () => {
+const Courses = () => {
     return (
         <div className={style.container}>
             <div className={styles.courses}>
@@ -96,7 +96,7 @@ const courses = () => {
                                 </p>
                                 <Link href={`/courses/${cours.courseId}`}>
                                     <a className={styles.link}>
-                                        batafsil ma'lumot
+                                        batafsil ma&apos;lumot
                                     </a>
                                 </Link>
                             </div>
@@ -108,4 +108,4 @@ const courses = () => {
     );
 };
 
-export default courses;
+export default Courses;

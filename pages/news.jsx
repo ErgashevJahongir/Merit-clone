@@ -60,7 +60,7 @@ const yangiliklar = [
     },
 ];
 
-const news = () => {
+const News = () => {
     return (
         <div className={style.container}>
             <div className={styles.news}>
@@ -83,7 +83,7 @@ const news = () => {
                                 <p>{item.date}</p>
                                 <Link href={`/news/${item.newId}`}>
                                     <a className={styles.link}>
-                                        Batafsil ma'lumot
+                                        Batafsil ma&apos;lumot
                                     </a>
                                 </Link>
                             </div>
@@ -95,4 +95,4 @@ const news = () => {
     );
 };
 
-export default news;
+export default News;

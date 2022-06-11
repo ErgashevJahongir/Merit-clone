@@ -50,6 +50,7 @@ const Footer = () => {
                     <div className={styles.card}>
                         <Image
                             className={styles.logo}
+                            alt="logo"
                             layout="intrinsic"
                             width={620}
                             src={footerLogo}
@@ -63,6 +64,7 @@ const Footer = () => {
                                     >
                                         <Image
                                             src={location.icon}
+                                            alt="location"
                                             width={20}
                                             height={20}
                                             className={styles.pink}
@@ -96,13 +98,14 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className={styles.card}>
-                        <h5>Bizga qo'shiling</h5>
+                        <h5>Bizga qo&apos;shiling</h5>
                         <ul className={styles.social}>
                             <li>
                                 <Link href="/facebook">
                                     <a>
                                         <Image
                                             src={facebook}
+                                            alt="facebook"
                                             width={20}
                                             height={20}
                                             className={styles.filter_white}
@@ -115,6 +118,7 @@ const Footer = () => {
                                     <a>
                                         <Image
                                             src={instagram}
+                                            alt="instagram"
                                             width={20}
                                             height={30}
                                             className={styles.filter_white}
@@ -127,6 +131,7 @@ const Footer = () => {
                                     <a>
                                         <Image
                                             src={telegram}
+                                            alt="telegram"
                                             width={20}
                                             height={30}
                                             className={styles.filter_white}

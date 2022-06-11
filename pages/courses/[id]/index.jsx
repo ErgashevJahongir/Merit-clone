@@ -68,10 +68,16 @@ const course = [
     },
 ];
 
-const index = () => {
+const Index = () => {
     const router = useRouter();
     const { id } = router.query;
     let son = 0;
+
+    const Callback = () => {
+        useEffect(() => {
+            router.push('/404');
+        }, []);
+    };
 
     return (
         <div className={styles.container}>
@@ -98,7 +104,7 @@ const index = () => {
                                 </h4>
                                 <Link href="#">
                                     <a className={styled.registr}>
-                                        DEMO-DARSGA RO`YHATDAN O'TISH
+                                        DEMO-DARSGA RO&apos;YHATDAN O&apos;TISH
                                     </a>
                                 </Link>
                             </div>
@@ -130,13 +136,11 @@ const index = () => {
                     son += 1;
                 }
                 if (son === course.length) {
-                    useEffect(() => {
-                        router.push('/404');
-                    }, []);
+                    Callback();
                 }
             })}
         </div>
     );
 };
 
-export default index;
+export default Index;

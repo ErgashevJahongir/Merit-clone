@@ -51,8 +51,8 @@ const Header = () => {
                 <div className={style.container}>
                     <div className={styles.flex}>
                         <div className={styles.language}>
-                            <Image src={uzb} width={30} height={30} />{' '}
-                            <p>O'zbek tili</p>
+                            <Image src={uzb} width={30} height={30} alt="uzb" />{' '}
+                            <p>O&apos;zbek tili</p>
                         </div>
                         <ul className={styles.social}>
                             <li>
@@ -60,6 +60,7 @@ const Header = () => {
                                     <a>
                                         <Image
                                             src={facebook}
+                                            alt="facebook"
                                             width={24}
                                             height={20}
                                             className={styles.filter_white}
@@ -72,6 +73,7 @@ const Header = () => {
                                     <a>
                                         <Image
                                             src={instagram}
+                                            alt="instagram"
                                             width={24}
                                             height={24}
                                             className={styles.filter_white}
@@ -84,6 +86,7 @@ const Header = () => {
                                     <a>
                                         <Image
                                             src={telegram}
+                                            alt="telegram"
                                             width={24}
                                             height={24}
                                             className={styles.filter_white}
@@ -100,26 +103,33 @@ const Header = () => {
                     <div className={styles.flex}>
                         <Link href="/">
                             <a className={styles.logo}>
-                                <Image height={58} width={180} src={logo} />
+                                <Image
+                                    height={58}
+                                    width={180}
+                                    src={logo}
+                                    alt="logo"
+                                />
                             </a>
                         </Link>
                         <ul className={styles.connection}>
                             <li className={styles.d_flex}>
                                 <Image
                                     src={telephone}
+                                    alt="telephone"
                                     width={30}
                                     height={36}
                                     className={styles.filter_lightblack}
                                 />
                                 <div className={styles.add}>
                                     <p className={styles.gray}>
-                                        BIZGA QO'NG'IROQ QILING!
+                                        BIZGA QO&apos;NG&apos;IROQ QILING!
                                     </p>
                                     <p>{callNumber[0].number}</p>
                                 </div>
                             </li>
                             <li className={styles.d_flex}>
                                 <Image
+                                    alt="clock"
                                     src={clock}
                                     width={30}
                                     height={36}
@@ -172,6 +182,7 @@ const Header = () => {
                             >
                                 <Image
                                     src={xicon}
+                                    alt="exit"
                                     width={32}
                                     height={41}
                                     className={styles.filter_white}
@@ -190,6 +201,7 @@ const Header = () => {
                                 <Link href="/">
                                     <a className={styles.navbar_logo_link}>
                                         <Image
+                                            alt="logo"
                                             height={58}
                                             width={180}
                                             src={logoOq}
@@ -205,6 +217,7 @@ const Header = () => {
                             >
                                 <Image
                                     src={bars}
+                                    alt="bars"
                                     width={31}
                                     height={37}
                                     className={styles.filter_white}

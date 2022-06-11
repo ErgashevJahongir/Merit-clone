@@ -1,14 +1,16 @@
-import React from 'react'
+import React from 'react';
 import Image from 'next/image';
 import style from '../styles/index.module.css';
-import Link from 'next/link'
-import aboutStyle from '../styles/about.module.css'
+import Link from 'next/link';
+import aboutStyle from '../styles/about.module.css';
 import { useState } from 'react';
 import Accardion1 from '../components/about/Accardion';
-const about = () => {
+
+const About = () => {
     const [state, setState] = useState([
         {
-            sectionTitle: "O'z ta'limingizni haqiqiy ekspertlarga qo'liga topshiring!",
+            sectionTitle:
+                "O'z ta'limingizni haqiqiy ekspertlarga qo'liga topshiring!",
             sectionText: `Merit Education - bilim olish uchun ideal joy. Chunki bizning o'quv markazimizda talabalar va br o'qituvchilar uchun barcha qulayliklar va imkoniyatlar yaratilb berilgan.
 
                 Ta'lim xizmatlarini taqdim etib kelyatgan 5 yil ichida biz 2500 dan ortiq talabalarni muvaffaqiyatli o'qitdik va bir nechta mukofotlarga sazovor bo'ldik.
@@ -30,38 +32,40 @@ const about = () => {
                 Talabalarimizga bizning kurslarda qantashish qulay bo'lishi uchun bizda shaxar bo'yicha 4ta filial mavjud.
                 
                 MERIT - learning now, leading tomorrow.`,
-            aboutUrl: "/about",
-            videoUrl: "https://merit.uz/video/merit-new.mp4",
-            posterImgUrl: "https://merit.uz//images/videocover.png"
-        }
-    ])
+            aboutUrl: '/about',
+            videoUrl: 'https://merit.uz/video/merit-new.mp4',
+            posterImgUrl: 'https://merit.uz//images/videocover.png',
+        },
+    ]);
     const [data, setData] = useState([
         {
             id: 1,
-            imgUrl: "https://merit.uz/uz/yii2images/images/image-by-item-and-alias?item=Events28&dirtyAlias=ef982f2b36-1_160x120.jpg",
-            titleThema: "Merit Education bilan 7 kun hursandchilik",
-            dataa: "December 7, 2019",
-            thema: "Merit Education bilan 7 kun hursandchilik",
-            detailed: "/news"
-        }, {
-            id: 1,
-            imgUrl: "https://merit.uz/uz/yii2images/images/image-by-item-and-alias?item=Events27&dirtyAlias=09b1776c10-1_160x120.jpg",
-            titleThema: "Merit Education bilan 7 kun hursandchilik",
-            dataa: "December 7, 2019",
-            thema: "Merit Education bilan 7 kun hursandchilik",
-            detailed: "/news"
+            imgUrl: 'https://merit.uz/uz/yii2images/images/image-by-item-and-alias?item=Events28&dirtyAlias=ef982f2b36-1_160x120.jpg',
+            titleThema: 'Merit Education bilan 7 kun hursandchilik',
+            dataa: 'December 7, 2019',
+            thema: 'Merit Education bilan 7 kun hursandchilik',
+            detailed: '/news',
         },
         {
             id: 1,
-            imgUrl: "https://merit.uz/uz/yii2images/images/image-by-item-and-alias?item=Events26&dirtyAlias=0fda07a3f7-1_160x120.jpg",
-            titleThema: "Merit Education bilan 7 kun hursandchilik",
-            dataa: "December 7, 2019",
-            thema: "Merit Education bilan 7 kun hursandchilik",
-            detailed: "/news"
-        }
-    ])
+            imgUrl: 'https://merit.uz/uz/yii2images/images/image-by-item-and-alias?item=Events27&dirtyAlias=09b1776c10-1_160x120.jpg',
+            titleThema: 'Merit Education bilan 7 kun hursandchilik',
+            dataa: 'December 7, 2019',
+            thema: 'Merit Education bilan 7 kun hursandchilik',
+            detailed: '/news',
+        },
+        {
+            id: 1,
+            imgUrl: 'https://merit.uz/uz/yii2images/images/image-by-item-and-alias?item=Events26&dirtyAlias=0fda07a3f7-1_160x120.jpg',
+            titleThema: 'Merit Education bilan 7 kun hursandchilik',
+            dataa: 'December 7, 2019',
+            thema: 'Merit Education bilan 7 kun hursandchilik',
+            detailed: '/news',
+        },
+    ]);
     return (
         <div className={style.container}>
+<<<<<<< HEAD
             <div className={aboutStyle.container}>
                 <h2 className={aboutStyle.title}>MERIT EDUCATION O'QUV MARKAZI</h2>
                 {state?.map((item, id) => {
@@ -110,10 +114,92 @@ const about = () => {
                         <p className={aboutStyle.text}>Biz haqimizda ko'proq biling</p>
                         <Accardion1 />
                     </div>
+=======
+            <h2 className={aboutStyle.title}>
+                MERIT EDUCATION O&apos;QUV MARKAZI
+            </h2>
+            {state?.map((item, id) => {
+                return (
+                    <div className={aboutStyle.boxes} key={id}>
+                        <div className={aboutStyle.box1}>
+                            <h4>{item.sectionTitle}</h4>
+                            <p>{item.sectionText}</p>
+                            <a
+                                className={aboutStyle.button}
+                                href={item.aboutUrl}
+                                type="button"
+                            >
+                                Batafsil o&apos;qish →
+                            </a>
+                        </div>
+                        <div className={aboutStyle.box2}>
+                            <video
+                                poster={item.posterImgUrl}
+                                controls="controls"
+                                src={item.videoUrl}
+                            ></video>
+                        </div>
+                    </div>
+                );
+            })}
+            <div className={aboutStyle.boxmax}>
+                <div className={aboutStyle.box3}>
+                    <h3>
+                        <Image
+                            src="/icon/main/calendar.png"
+                            alt="calendar"
+                            height={25}
+                            width={25}
+                        />
+                        O&apos;QUV MARKAZDAGI VOQEALAR
+                    </h3>
+                    {data?.map((item, id) => {
+                        return (
+                            <div className={aboutStyle.news} key={id}>
+                                <div className={aboutStyle.img}>
+                                    <Image
+                                        src={item.imgUrl}
+                                        alt="news"
+                                        width={130}
+                                        height={130}
+                                    />
+                                </div>
+                                <div className={aboutStyle.post}>
+                                    <h4>{item.titleThema}</h4>
+                                    <p className={aboutStyle.data}>
+                                        <Image
+                                            src="/icon/main/calendar.png"
+                                            alt="calendar"
+                                            width={15}
+                                            height={15}
+                                        />
+                                        {item.dataa}
+                                    </p>
+                                    <p className={aboutStyle.thema}>
+                                        {item.thema}
+                                    </p>
+                                    <a
+                                        className={aboutStyle.detailed}
+                                        href={item.detailed}
+                                    >
+                                        Batafsil →
+                                    </a>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+                <div className={aboutStyle.box4}>
+                    <h3>Nimaga bizni tanlashadi </h3>
+                    <p className={aboutStyle.text}>
+                        Biz haqimizda ko&apos;proq biling
+                    </p>
+                    <Accardion1 />
+>>>>>>> 46b056d57eb9eda06ab71006495e8aba002d6c8b
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default about
+export default About;

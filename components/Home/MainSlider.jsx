@@ -147,7 +147,7 @@ const MainSlider = () => {
                                     </p>
                                     <Link href={`/courses/${cours.courseId}`}>
                                         <a className={styles.link}>
-                                            batafsil ma'lumot
+                                            batafsil ma&apos;lumot
                                             <FaLongArrowAltRight />
                                         </a>
                                     </Link>
