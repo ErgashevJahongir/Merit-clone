@@ -1,0 +1,63 @@
+.boxes{
+    display: flex;
+}
+.box1{
+    width: 50%;
+}
+.box2{
+    width: 50%;
+}
+.news{
+    display: flex;
+    margin-bottom:10px;
+}
+.thema{
+    position: relative;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    font-family: 'Open Sans',sans-serif;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #333;
+    font-size: 24px;
+}
+.thema::after{
+    background-color: #F2184F;
+    bottom: -1px;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 50px;
+}
+.title{
+    margin-bottom: 5px;
+    font-family: 'Open Sans',sans-serif;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #333;
+    font-size: 18px;
+}
+.data{
+    line-height: 1.7;
+    color: #666;
+    font-size: 14px;
+    font-family: 'Open Sans',sans-serif;
+    margin-bottom: 5px;
+}
+.text{
+    line-height: 1.7;
+    color: #666;
+    font-size: 14px;
+    font-family: 'Open Sans',sans-serif;
+}
+.link{
+    line-height: 1.7;
+    color: #F2184F;
+    font-size: 14px;
+    font-family: 'Open Sans',sans-serif;  
+}
+.post{
+    margin-left: 15px;
+}

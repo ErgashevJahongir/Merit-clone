@@ -1,9 +1,14 @@
 .title {
     text-align: center;
-    font-size: 28px;
     color: #333;
-    font-weight: 600;
     position: relative;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    font-size: 28px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    line-height: 1.42857143;
+
 }
 
 .title::after {
@@ -15,6 +20,11 @@
     position: absolute;
     width: 50px;
     background: #F2184F;
+}
+
+.container {
+    padding-top: 70px;
+    padding-bottom: 70px;
 }
 
 .video {
@@ -31,6 +41,10 @@
     padding-bottom: 20px;
     word-spacing: 1px;
     letter-spacing: 1px;
+    line-height: 1.7;
+    color: #666;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .boxes {
@@ -63,6 +77,7 @@
     padding: 10px 25px;
     margin-top: 20px !important;
     margin-bottom: 30px !important;
+    border-color: #202C45;
 }
 
 .boxmax {
@@ -71,10 +86,15 @@
 }
 
 .boxmax .box3 h3 {
-    font-size: 24px;
-    color: #333;
+    margin-top: 0!important;
+    position: relative;
     margin-bottom: 30px;
     padding-bottom: 10px;
+    font-family: 'Open Sans',sans-serif;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #333;
+    font-size: 24px;
     align-items: center;
 }
 
@@ -111,7 +131,7 @@
     flex: none;
 }
 
-.box {
+.box1 {
     width: 50%;
 }
 
@@ -153,5 +173,16 @@
     color: #666;
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
+    margin-bottom: 10px;
+}
+
+.sectionTitle {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #333;
+    font-size: 18px;
+    font-size: 18px;
+    margin-top: 10px;
     margin-bottom: 10px;
 }

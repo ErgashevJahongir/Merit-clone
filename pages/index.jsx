@@ -9,7 +9,8 @@ import NewsSlider from '../components/Home/NewsSlider';
 import MainSlider from '../components/Home/MainSlider';
 import React from 'react';
 import Facts from '../components/Home/Facts';
-
+import HomePage from '../components/about/HomePage';
+import Events from '../components/about/Events';
 export default function Home() {
     return (
         <>
@@ -42,6 +43,9 @@ export default function Home() {
                 <section>
                     <MainSlider />
                 </section>
+                <div>
+                    <HomePage />
+                </div>
                 <div className="main">
                     <section className={styles.courses}>
                         <div className={style.container}>
@@ -56,6 +60,7 @@ export default function Home() {
                             <TeachersSlider />
                         </div>
                     </section>
+                    <Events />
                     <section className={styles.courses}>
                         <div className={style.container}>
                             <NewsSlider />
