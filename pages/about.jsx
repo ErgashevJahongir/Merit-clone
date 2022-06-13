@@ -65,137 +65,89 @@ const About = () => {
     ]);
     return (
         <div className={style.container}>
-<<<<<<< HEAD
             <div className={aboutStyle.container}>
-                <h2 className={aboutStyle.title}>MERIT EDUCATION O'QUV MARKAZI</h2>
+                <h2 className={aboutStyle.title}>
+                    MERIT EDUCATION O&apos;QUV MARKAZI
+                </h2>
                 {state?.map((item, id) => {
                     return (
                         <div className={aboutStyle.boxes} key={id}>
                             <div className={aboutStyle.box1}>
-                                <h4 className={aboutStyle.sectionTitle}><strong>{item.sectionTitle}</strong></h4>
+                                <h4>{item.sectionTitle}</h4>
                                 <p>{item.sectionText}</p>
-                                <Link href={item.aboutUrl}><a className={aboutStyle.button}>Batafsil o'qish →</a></Link>
+                                <a
+                                    className={aboutStyle.button}
+                                    href={item.aboutUrl}
+                                    type="button"
+                                >
+                                    Batafsil o&apos;qish →
+                                </a>
                             </div>
                             <div className={aboutStyle.box2}>
-                                <video poster={item.posterImgUrl} controls='controls' src={item.videoUrl}></video>
+                                <video
+                                    poster={item.posterImgUrl}
+                                    controls="controls"
+                                    src={item.videoUrl}
+                                ></video>
                             </div>
                         </div>
-                    )
+                    );
                 })}
-                <div className={aboutStyle.boxmax} >
+                <div className={aboutStyle.boxmax}>
                     <div className={aboutStyle.box3}>
                         <h3>
-                            <Image src="/icon/main/calendar.png" height={25} width={25} />
-                            O'QUV MARKAZDAGI VOQEALAR
+                            <Image
+                                src="/icon/main/calendar.png"
+                                alt="calendar"
+                                height={25}
+                                width={25}
+                            />
+                            O&apos;QUV MARKAZDAGI VOQEALAR
                         </h3>
                         {data?.map((item, id) => {
                             return (
                                 <div className={aboutStyle.news} key={id}>
                                     <div className={aboutStyle.img}>
-                                        <Image src={item.imgUrl} width={130} height={130} />
+                                        <Image
+                                            src={item.imgUrl}
+                                            alt="news"
+                                            width={130}
+                                            height={130}
+                                        />
                                     </div>
                                     <div className={aboutStyle.post}>
                                         <h4>{item.titleThema}</h4>
                                         <p className={aboutStyle.data}>
-                                            <Image src='/icon/main/calendar.png' width={15} height={15} />
+                                            <Image
+                                                src="/icon/main/calendar.png"
+                                                alt="calendar"
+                                                width={15}
+                                                height={15}
+                                            />
                                             {item.dataa}
                                         </p>
                                         <p className={aboutStyle.thema}>
                                             {item.thema}
                                         </p>
-                                        <a className={aboutStyle.detailed} href={item.detailed}>Batafsil →</a>
+                                        <a
+                                            className={aboutStyle.detailed}
+                                            href={item.detailed}
+                                        >
+                                            Batafsil →
+                                        </a>
                                     </div>
                                 </div>
-                            )
+                            );
                         })}
                     </div>
                     <div className={aboutStyle.box4}>
                         <h3>Nimaga bizni tanlashadi </h3>
-                        <p className={aboutStyle.text}>Biz haqimizda ko'proq biling</p>
+                        <p className={aboutStyle.text}>
+                            Biz haqimizda ko&apos;proq biling
+                        </p>
                         <Accardion1 />
+                        {/* >>>>>>> 46b056d57eb9eda06ab71006495e8aba002d6c8b */}
                     </div>
-=======
-            <h2 className={aboutStyle.title}>
-                MERIT EDUCATION O&apos;QUV MARKAZI
-            </h2>
-            {state?.map((item, id) => {
-                return (
-                    <div className={aboutStyle.boxes} key={id}>
-                        <div className={aboutStyle.box1}>
-                            <h4>{item.sectionTitle}</h4>
-                            <p>{item.sectionText}</p>
-                            <a
-                                className={aboutStyle.button}
-                                href={item.aboutUrl}
-                                type="button"
-                            >
-                                Batafsil o&apos;qish →
-                            </a>
-                        </div>
-                        <div className={aboutStyle.box2}>
-                            <video
-                                poster={item.posterImgUrl}
-                                controls="controls"
-                                src={item.videoUrl}
-                            ></video>
-                        </div>
-                    </div>
-                );
-            })}
-            <div className={aboutStyle.boxmax}>
-                <div className={aboutStyle.box3}>
-                    <h3>
-                        <Image
-                            src="/icon/main/calendar.png"
-                            alt="calendar"
-                            height={25}
-                            width={25}
-                        />
-                        O&apos;QUV MARKAZDAGI VOQEALAR
-                    </h3>
-                    {data?.map((item, id) => {
-                        return (
-                            <div className={aboutStyle.news} key={id}>
-                                <div className={aboutStyle.img}>
-                                    <Image
-                                        src={item.imgUrl}
-                                        alt="news"
-                                        width={130}
-                                        height={130}
-                                    />
-                                </div>
-                                <div className={aboutStyle.post}>
-                                    <h4>{item.titleThema}</h4>
-                                    <p className={aboutStyle.data}>
-                                        <Image
-                                            src="/icon/main/calendar.png"
-                                            alt="calendar"
-                                            width={15}
-                                            height={15}
-                                        />
-                                        {item.dataa}
-                                    </p>
-                                    <p className={aboutStyle.thema}>
-                                        {item.thema}
-                                    </p>
-                                    <a
-                                        className={aboutStyle.detailed}
-                                        href={item.detailed}
-                                    >
-                                        Batafsil →
-                                    </a>
-                                </div>
-                            </div>
-                        );
-                    })}
-                </div>
-                <div className={aboutStyle.box4}>
-                    <h3>Nimaga bizni tanlashadi </h3>
-                    <p className={aboutStyle.text}>
-                        Biz haqimizda ko&apos;proq biling
-                    </p>
-                    <Accardion1 />
->>>>>>> 46b056d57eb9eda06ab71006495e8aba002d6c8b
                 </div>
             </div>
         </div>
