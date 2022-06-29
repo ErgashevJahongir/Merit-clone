@@ -56,7 +56,8 @@ export default function Home() {
                         <Facts />
                     </section>
                     <section className={styles.courses}>
-                        <div className={style.container}>
+                        <div className={style.container}>yarn dev
+                        
                             <TeachersSlider />
                         </div>
                     </section>
